@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -5,8 +6,10 @@ void main() {
   runApp(const MyApp());
 }
 
-var dark = Colors.black;
-var light = Colors.white;
+
+
+//var dark = Colors.black;
+//var light = Colors.white;
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -14,7 +17,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: Colors.black,
+          title: Text('MI CARD'),
+        ),
         backgroundColor: Colors.white,
         body: SafeArea(
           child: Column(
@@ -56,6 +65,9 @@ class MyApp extends StatelessWidget {
                 color: Colors.black,
                 thickness: 2,
               ),
+              const SizedBox(
+                height: 20.0,
+              ),
               Card(
                 color: Colors.black,
                 elevation: 10.0,
@@ -87,7 +99,7 @@ class MyApp extends StatelessWidget {
                         textStyle: const TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w200,
-                          fontSize: 20.0,
+                          fontSize: 23.0,
 
                         )
                       ),
@@ -110,6 +122,90 @@ class MyApp extends StatelessWidget {
 
                       ),
                 ),
+              ),
+              const SizedBox(
+                height: 10.0,
+              ),
+              Card(
+                elevation: 10.0,
+                color: Colors.black,
+                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                child: ListTile(
+                  title: Text('Bachelor of Technology',
+                  style: GoogleFonts.pacifico(
+                    textStyle: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w200,
+                      fontSize: 25.0,
+                    )
+                  ),),
+                ),
+
+              ),
+              const SizedBox(
+                height: 10.0,
+              ),
+              Card(
+                elevation: 10.0,
+                color: Colors.black,
+                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                child: ListTile(
+                  title: Text('Electrical and Electronics Engineering',
+                  style: GoogleFonts.pacifico(
+                    textStyle: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w200,
+                      fontSize: 23.0,
+                    )
+                  ),),
+                ),
+              ),
+              const SizedBox(
+                height: 10.0,
+              ),
+              Card(
+                elevation: 10.0,
+                color: Colors.black,
+                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.call,
+                    color: Colors.white,
+                  ),
+                  title: Text('+91 7500168044',
+                  style: GoogleFonts.pacifico(
+                    textStyle: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w200,
+                      fontSize: 30.0,
+                    )
+                  ),),
+                ),
+              ),
+              const SizedBox(
+                height: 10.0,
+              ),
+              Card(
+                elevation: 10.0,
+                  color: Colors.black,
+                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.white,
+                  ),
+                  title: Text('divyaksh1552002@gmail.com',
+                  style: GoogleFonts.pacifico(
+                    textStyle: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w200,
+                      fontSize: 25.0,
+                    )
+                  ),),
+
+
+
+              ),
               ),
             ],
           ),
